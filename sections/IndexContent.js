@@ -1,6 +1,6 @@
 import { ArrowDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import scrollAnimation from "../public/scrollAnimation.json";
 
 export default function IndexContent({ colors, temas }) {
@@ -89,7 +89,7 @@ export default function IndexContent({ colors, temas }) {
         })}
       </div>
       <a className=" text-white text-center mt-16" type="button" onClick={null}>
-        <Lottie options={defaultOptions} height={120} width={120} />
+        {/* <Lottie options={defaultOptions} height={120} width={120} /> */}
         <div className="w-40 flex justify-center">
           <h3 className="font-bold float-left px-2 dark:text-white text-black">
             Scroll Down
