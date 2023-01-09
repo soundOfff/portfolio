@@ -1,0 +1,119 @@
+{
+  "skills": [
+    {
+      "name": "Frontend",
+      "skills": [
+        {
+          "name": "HTML & CSS",
+          "level": "Advanced",
+          "description": ""
+        },
+        {
+          "name": "JavaScript ECMAScript 6",
+          "level": "Advanced",
+          "description": ""
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "React",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "Next js",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "Github",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "Git",
+          "level": "Intermediate",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        {
+          "name": "Express",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "MySQL",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "MongoDB",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "Time complexity - Big O",
+          "level": "Conceptual",
+          "description": ""
+        },
+        {
+          "name": "REST Apis",
+          "level": "Conceptual",
+          "description": ""
+        },
+        {
+          "name": "Authentification",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "TDD & ATDD",
+          "level": "Basic",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Others",
+      "skills": [
+        {
+          "name": "C",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "C#",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "NET Framework 4.7",
+          "level": "Intermediate",
+          "description": ""
+        },
+        {
+          "name": "Monogame",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "Smalltalk",
+          "level": "Basic",
+          "description": ""
+        },
+        {
+          "name": "Python",
+          "level": "Intermediate",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
