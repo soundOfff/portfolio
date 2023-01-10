@@ -4,6 +4,7 @@ import {
   AcademicCapIcon,
   DocumentDownloadIcon,
 } from "@heroicons/react/solid";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -18,9 +19,16 @@ export default function About() {
           </h3>
         </div>
         <div className="pt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-20">
-          <a
+          <motion.div
+            whileHover={{
+              scale: [1, 1.2],
+              transition: { duration: 0.4 },
+              textShadow: "2px 2px 6px white",
+            }}
             href="#"
-            className="block max-w-sm p-6  text-center bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="block max-w-sm p-6 text-center bg-white border
+            border-gray-200 rounded-lg shadow-md hover:bg-gray-100
+            dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <BriefcaseIcon className="h-8 w-8 mx-auto" />
             <h5 className="mb-2 pt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -29,10 +37,17 @@ export default function About() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               48 + Proyects.
             </p>
-          </a>
-          <a
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: [1, 1.2],
+              transition: { duration: 0.4 },
+              textShadow: "2px 2px 6px white",
+            }}
             href="#"
-            className="block max-w-sm p-6  text-center bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="block max-w-sm p-6 text-center bg-white border
+            border-gray-200 rounded-lg shadow-md hover:bg-gray-100
+            dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <SupportIcon className="h-8 w-8 mx-auto" />
             <h5 className="mb-2 pt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -41,10 +56,17 @@ export default function About() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               Online 24/7.
             </p>
-          </a>
-          <a
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: [1, 1.2],
+              transition: { duration: 0.4 },
+              textShadow: "2px 2px 6px white",
+            }}
             href="#"
-            className="block max-w-sm p-6  text-center bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="block max-w-sm p-6 text-center bg-white border
+            border-gray-200 rounded-lg shadow-md hover:bg-gray-100
+            dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <AcademicCapIcon className="h-8 w-8 mx-auto" />
             <h5 className="mb-2 pt-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -53,7 +75,7 @@ export default function About() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
               1/2 Year.
             </p>
-          </a>
+          </motion.div>
         </div>
         <p className="pt-20 w-1/2 text-xl dark:text-gray-400 text-black">
           I am a highly motivated software developer with a business orientation

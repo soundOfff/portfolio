@@ -1,4 +1,3 @@
-// Crear obj con colores, se renderiza
 const colors = {
   Intermediate: "text-Intermediate",
   Basic: "text-Basic",
