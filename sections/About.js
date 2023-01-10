@@ -8,7 +8,11 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="w-full my-20">
+    <section
+      id="about"
+      className="w-full flex justify-center"
+      style={{ height: "100vh" }}
+    >
       <div className="w-full flex flex-col items-center justify-center">
         <div className="text-center space-y-4">
           <h1 className="text-2xl flex flex-row w-fit text-gray-800 leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100">
