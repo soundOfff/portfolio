@@ -29,8 +29,8 @@ export default function Proyect({ name, description, tech, src }) {
 
   return (
     <li
-      className="flex flex-row w-full mx-auto dark:bg-gray-800 bg-white shadow-xl rounded-lg p-4 relative justify-center space-x-20 items-center"
-      style={{ height: "40vh" }}
+      className="flex flex-row w-full mx-auto dark:bg-gray-800 bg-white shadow-xl rounded-lg px-4 py-8 relative justify-center space-x-20 items-center"
+      style={{ height: "45vh" }}
     >
       <div className="w-1/3 text-left h-3/4 overflow-y-auto mt-10">
         <h4 className="text-lg md:text-2xl pb-5 text-center font-medium text-gray-900 dark:text-gray-100 self-end">
@@ -62,7 +62,7 @@ export default function Proyect({ name, description, tech, src }) {
             className="object-cover overflow-hidden rounded-lg brightness-75"
             onLoadingComplete={handleOnLoad}
             sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 25vw,
+            (max-width: 1200px) 25vw,
               33vw"
           />
           {hidden && loaded && (

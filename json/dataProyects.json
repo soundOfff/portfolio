@@ -32,19 +32,19 @@
       "src": "/proyects/AnimationCartLabels.gif"
     },
     {
-      "proyectName": "To Do List using localStorage",
+      "proyectName": "ToDo List using localStorage",
       "description": "For this project, I developed a web application using React that allows users to create and manage a to-do list. I implemented the storage of the to-do list using the local storage feature of the user's web browser. The application includes a visually appealing user interface and allows users to add, edit, and delete items on their to-do list.",
       "tech": ["JavaScript", "React", "Tailwind CSS & HTML"],
       "src": "/proyects/AnimationTodo.gif"
     },
     {
-      "proyectName": "Self-management system of subjects (Desktop)",
+      "proyectName": "Self management system of subjects (Desktop)",
       "description": "I developed a desktop application using .NET Framework that allows for self-management of subjects with different roles. Students can use the app to view and sign up for available exams, view their exam schedule and grades, and manage their personal information. Teachers can use the app to upload grades and other relevant information for exams and manage their own personal information. A superuser role allows for the creation and modification of user accounts within the system. The app was built using Windows Forms and has a visually appealing and easy-to-use interface.",
       "tech": [".NET Framework", "Windows Forms", "C#"],
       "src": "/proyects/AnimationSysacad.gif"
     },
     {
-      "proyectName": "Self-management system of subjects (Web)",
+      "proyectName": "Self management system of subjects (Web)",
       "description": "Same concept as above, but for browsers.",
       "tech": [".NET Framework", "CSS & HTML", "JavaScript", "ASP.NET"],
       "src": "/proyects/AnimationSysacadWeb.gif"

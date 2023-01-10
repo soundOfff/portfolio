@@ -8,7 +8,6 @@ const colors = {
 
 import { CheckCircleIcon } from "@heroicons/react/solid";
 export default function Skill({ name, level, description }) {
-  console.log(level);
   return (
     <div className="flex flex-col py-2 px-2 text-center  hover:bg-gray-700 rounded-xl">
       <div className="">

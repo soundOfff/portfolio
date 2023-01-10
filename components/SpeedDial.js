@@ -7,7 +7,7 @@ export default function SpeedDial() {
     <>
       <div data-dial-init className="fixed bottom-6 right-24 group">
         <div
-          id="speed-dial-menu-dropdown-alternative"
+          id="speed-dial"
           style={{ height: "60vh", width: "25vw" }}
           className={`${
             openDialog ? "flex flex-col" : "hidden"
