@@ -8,21 +8,17 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="w-full flex justify-center"
-      style={{ height: "100vh" }}
-    >
+    <section id="about" className="w-full flex" style={{ minHeight: "100vh" }}>
       <div className="w-full flex flex-col items-center justify-center">
-        <div className="text-center space-y-4">
-          <h1 className="text-2xl flex flex-row w-fit text-gray-800 leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100">
-            About Me
-          </h1>
+        <h1 className="text-2xl flex flex-row w-fit text-gray-800 leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100">
+          About Me
+        </h1>
+        <div className="text-center pt-10">
           <h3 className="text-white dark:text-gray-400 text-lg ">
             Introduction
           </h3>
         </div>
-        <div className="pt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-20">
+        <div className="pt-10 grid grid-cols-3 gap-x-10 sm:gap-x-20">
           <motion.div
             whileHover={{
               scale: [1, 1.2],

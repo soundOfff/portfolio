@@ -5,10 +5,13 @@ export default function SpeedDial() {
 
   return (
     <>
-      <div data-dial-init className="fixed bottom-6 right-24 group">
+      <div
+        data-dial-init
+        className="fixed bottom-6 right-24 group sm:block hidden"
+      >
         <div
           id="speed-dial"
-          style={{ height: "60vh", width: "25vw" }}
+          style={{ minHeight: "540px", minWidth: "540px" }}
           className={`${
             openDialog ? "flex flex-col" : "hidden"
           } py-1 mb-4 bg-white rounded-lg border border-gray-100 overflow-y-auto shadow-sm dark:bg-gray-800 dark:border-gray-600`}

@@ -6,20 +6,20 @@ export default function IndexContent({ colors, temas }) {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center space-y-5 pt-40 pb-5"
-      style={{ height: "100vh" }}
+      className="flex flex-col items-center justify-center space-y-5 pt-20 pb-5"
+      style={{ minHeight: "100vh" }}
     >
-      <div className="-z-10 h-full">
+      <div className="-z-10">
         <Image src="/bg2.svg" fill={true} className="object-cover" />
       </div>
       {/* Headlines */}
-      <h2 className="text-2xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
+      <h2 className="text-4xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
         Welcome to my Portfolio
-        <Image src="/hand.svg" height={64} width={64} className="ml-4" />
+        <Image src="/hand.svg" height={64} width={64} />
       </h2>
       <div className="w-full grid grid-cols-1 pt-6">
         <div className="flex flex-row justify-center items-center space-x-10">
-          <p className="text-xl sm:text-md text-left text-gray-500 dark:text-gray-200 w-2/5 py-2">
+          <p className="text-sm sm:text-lg text-left text-gray-500 dark:text-gray-200 w-2/5 py-2">
             <b className="text-blue-500">
               Software Developer | System Engenieer
             </b>
@@ -84,11 +84,11 @@ export default function IndexContent({ colors, temas }) {
           </div>
         </div>
       </div>
-      <div className="pt-10 w-fit grid grid-cols-1 gap-y-2 gap-x-2 grid-rows-1 md:grid-cols-3 md:gap-y-4 md:gap-x-10 md:grid-rows-2 sm:grid-cols-2 ">
+      <div className="pt-10 w-fit grid grid-cols-1 gap-y-2 gap-x-2 grid-rows-1 lg:grid-cols-3 md:gap-y-4 md:gap-x-10 md:grid-rows-2 sm:grid-cols-2 ">
         {/* Componente tipo icon que te lleve a la seccion correspondiente para no repetir */}
         {temas.map((tema, i) => {
           return (
-            <button className="w-72 btn text-ellipsis  relative inline-flex items-center justify-start overflow-hidden transition-all bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 group">
+            <button className="sm:w-72 w-52  btn text-ellipsis  relative inline-flex items-center justify-start overflow-hidden transition-all bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 group">
               <span
                 className={`w-0 h-0 rounded absolute ${colors[i]} top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1`}
               ></span>
@@ -99,7 +99,7 @@ export default function IndexContent({ colors, temas }) {
           );
         })}
       </div>
-      <a className=" text-white mx-auto mt-16" type="button" onClick={null}>
+      <a className=" text-white mx-auto" type="button" onClick={null}>
         <Image
           height={128}
           width={128}
