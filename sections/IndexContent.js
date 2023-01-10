@@ -1,12 +1,17 @@
 import { ArrowDownIcon } from "@heroicons/react/solid";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function IndexContent({ colors, temas }) {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center space-y-5 mt-40"
+      className="relative flex flex-col items-center justify-center space-y-5 pt-40 pb-5"
+      style={{ height: "100vh" }}
     >
+      <div className="-z-10 h-full">
+        <Image src="/bg2.svg" fill={true} className="object-cover" />
+      </div>
       {/* Headlines */}
       <h2 className="text-2xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
         Welcome to my Portfolio
@@ -94,14 +99,14 @@ export default function IndexContent({ colors, temas }) {
           );
         })}
       </div>
-      <a className=" text-white text-center mt-16" type="button" onClick={null}>
+      <a className=" text-white mx-auto mt-16" type="button" onClick={null}>
         <Image
-          height={120}
-          width={120}
+          height={128}
+          width={128}
           src="/scrollAn.gif"
           className="bg-transparent"
         />
-        <div className="w-40 text-center">
+        <div className="w-32">
           <h3 className="font-bold float-left px-2 dark:text-white text-black">
             Scroll Down
           </h3>

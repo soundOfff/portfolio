@@ -15,7 +15,7 @@ function Navbar({ darkMode }) {
                 <Logo />
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4 pb-1 border-b-2">
+                <div className="ml-10 flex items-baseline space-x-4 pb-1 border-b-2 border-blue-800">
                   <Link
                     activeClass="home"
                     to="home"
