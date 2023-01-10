@@ -13,9 +13,9 @@ export default function IndexContent({ colors, temas }) {
         <Image src="/bg2.svg" fill={true} className="object-cover" />
       </div>
       {/* Headlines */}
-      <h2 className="text-4xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 pr-4">
+      <h2 className="text-4xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100">
         Welcome to my Portfolio
-        <Image src="/hand.svg" height={64} width={64} />
+        <Image src="/hand.svg" height={64} width={64} className="ml-4" />
       </h2>
       <div className="w-full grid grid-cols-1 pt-6">
         <div className="flex flex-row justify-center items-center space-x-10">
