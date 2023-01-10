@@ -15,7 +15,7 @@ export default function Skills() {
   const parsedData = JSON.parse(data);
 
   return (
-    <section className="my-10" style={{ height: "100vh" }}>
+    <section id="skills" className="my-10" style={{ height: "100vh" }}>
       <div className="w-full h-full flex flex-col justify-center items-center pt-10 space-y-10">
         <h2 className="text-2xl text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
           My Skills

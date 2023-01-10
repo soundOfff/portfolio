@@ -14,7 +14,7 @@ export default function Proyects() {
   const parsedData = JSON.parse(data);
 
   return (
-    <section className="my-10 w-full h-fit">
+    <section className="my-10 w-full h-fit" id="proyects">
       <div className="w-full h-full flex flex-col justify-center items-center">
         <h2 className="text-2xl text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
           Proyects

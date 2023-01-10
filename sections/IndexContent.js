@@ -1,31 +1,31 @@
 import { ArrowDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-// import Lottie from "react-lottie";
-import scrollAnimation from "../public/scrollAnimation.json";
 
 export default function IndexContent({ colors, temas }) {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: scrollAnimation,
-    renderer: "svg",
-  };
   return (
-    <section className="relative flex flex-col items-center justify-center space-y-5  my-10 ">
+    <section
+      id="home"
+      className="relative flex flex-col items-center justify-center space-y-5 mt-40"
+    >
       {/* Headlines */}
       <h2 className="text-2xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
         Welcome to my Portfolio
         <Image src="/hand.svg" height={64} width={64} className="ml-4" />
       </h2>
       <div className="w-full grid grid-cols-1 pt-6">
-        <div className="flex flex-row justify-center items-center">
-          <p className="text-xl sm:text-md text-left text-gray-500 dark:text-gray-200 w-2/5">
+        <div className="flex flex-row justify-center items-center space-x-10">
+          <p className="text-xl sm:text-md text-left text-gray-500 dark:text-gray-200 w-2/5 py-2">
             <b className="text-blue-500">
               Software Developer | System Engenieer
             </b>
             <br />
-            Voy a mostrar varios proyectos que tengo hechos, ademas de lecturas
-            adquiridas y trabajos practicos realizados sobre varios temas como:
+            Welcome to my portfolio! On this page, you will find a selection of
+            projects that I have worked on, both personal and professional. Each
+            project includes a brief description of the work that I did and any
+            relevant technologies or skills that were used. I hope you enjoy
+            exploring my portfolio and learning more about my work. Please feel
+            free to contact me if you have any questions or would like to
+            discuss a potential project.
           </p>
           <div className="border-2 relative border-black dark:border-white rounded-full h-64 w-64">
             <Image
@@ -34,7 +34,7 @@ export default function IndexContent({ colors, temas }) {
               width={256}
               className="rounded-full"
             />
-            <a className="absolute top-0 -right-6">
+            <a className="absolute top-0 -right-6" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 488 512"
@@ -46,7 +46,10 @@ export default function IndexContent({ colors, temas }) {
                 />
               </svg>
             </a>
-            <div className="absolute top-1/3 pt-5 -right-16">
+            <a
+              className="absolute top-1/3 pt-5 -right-16"
+              href="https://www.linkedin.com/in/tomasbrasca/"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -57,8 +60,11 @@ export default function IndexContent({ colors, temas }) {
                   d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
                 />
               </svg>
-            </div>
-            <a className="absolute bottom-0 -right-6 ">
+            </a>
+            <a
+              className="absolute bottom-0 -right-6"
+              href="https://github.com/soundOfff"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
@@ -89,8 +95,13 @@ export default function IndexContent({ colors, temas }) {
         })}
       </div>
       <a className=" text-white text-center mt-16" type="button" onClick={null}>
-        {/* <Lottie options={defaultOptions} height={120} width={120} /> */}
-        <div className="w-40 flex justify-center">
+        <Image
+          height={120}
+          width={120}
+          src="/scrollAn.gif"
+          className="bg-transparent"
+        />
+        <div className="w-40 text-center">
           <h3 className="font-bold float-left px-2 dark:text-white text-black">
             Scroll Down
           </h3>

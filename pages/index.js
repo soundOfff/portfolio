@@ -15,12 +15,12 @@ const colors = [
   "bg-green-600",
 ];
 const temas = [
-  "Desktop y Web",
-  "Probabilidad y Estadistica",
-  "Bases de datos",
-  "Simulacion dinamica",
-  "Metodologias Agiles",
-  "Algoritmos Geneticos",
+  "Desktop & Web",
+  "Probability & Statistics",
+  "Databases",
+  "Dynamic Simulation",
+  "Agile Methodologies",
+  "Genetic Algorithms",
 ];
 
 export default function Home() {

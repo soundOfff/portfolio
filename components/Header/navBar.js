@@ -1,50 +1,122 @@
-import { useState } from "react";
-import Dropdown from "../../components/Header/Dropdown";
-import Logo from "../../components/Logo";
+import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Logo from "../Logo";
 
-export default function NavBar({ renderTheme }) {
-  const [navbar, setNavbar] = useState(false);
-
+function Navbar({ darkMode }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="w-full bg-gray-800 shadow">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
-              <Logo />
-            </a>
-            {/* {<a className="float-left">{renderTheme()}</a>} */}
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+    <div>
+      <nav className=" shadow-sm fixed w-full z-10">
+        <div className="w-full">
+          <div className="flex items-center h-20 w-full">
+            <div className="flex items-center  mx-20  justify-between w-full">
+              <div className="flex justify-center items-center flex-shrink-0 ">
+                <Logo />
+              </div>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4 pb-1 border-b-2">
+                  <Link
+                    activeClass="home"
+                    to="home"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer hover:bg-gray-800  dark:text-white font-bold text-black px-3 py-2 rounded-md text-base font-md"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ) : (
+                    Home
+                  </Link>
+                  <Link
+                    activeClass="about"
+                    to="about"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer hover:bg-gray-800 dark:text-white font-bold text-black px-3 py-2 rounded-md text-base font-md"
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href="/skills"
+                    activeClass="skills"
+                    to="skills"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer hover:bg-gray-800 text-black font-bold dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                  >
+                    Skills
+                  </Link>
+
+                  <Link
+                    href="/projects"
+                    activeClass="projects"
+                    to="projects"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer hover:bg-gray-800 text-black font-bold dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                  >
+                    Projects
+                  </Link>
+
+                  <Link
+                    activeClass="contact"
+                    to="contact"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer hover:bg-gray-800 dark:text-white font-bold text-black px-3 py-2 rounded-md text-base font-md"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scroll.scrollToBottom();
+                    }}
+                  >
+                    Contact
+                  </Link>
+                  <div className="absolute right-5">{darkMode}</div>
+                </div>
+              </div>
+            </div>
+            <div className="mr-10 flex md:hidden ">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
                   <svg
+                    className="block h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={2}
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
                     />
                   </svg>
                 )}
@@ -52,32 +124,87 @@ export default function NavBar({ renderTheme }) {
             </div>
           </div>
         </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
-          >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white hover:text-indigo-200">
-                <Dropdown name="Home" />
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Dropdown name="About" />
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Dropdown name="Skills" />
-              </li>
-              <li className="text-white hover:text-indigo-200">
-                <Dropdown
-                  name="Proyects"
-                  items={["Support", "Information", "Contact", "Proyects"]}
-                />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div
+                ref={ref}
+                className="dark:bg-gray-800 bg-gray-400 px-2 pt-2 pb-3 space-y-3 sm:px-3 rounded-xl shadow-lg"
+              >
+                <Link
+                  href="/Home"
+                  activeClass="Home"
+                  to="Home"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-gray-800 text-black dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/About"
+                  activeClass="About"
+                  to="About"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-gray-800 text-black dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/Skills"
+                  activeClass="Skills"
+                  to="Skills"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-gray-800 text-black dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                >
+                  Skills
+                </Link>
+
+                <Link
+                  href="/Projects"
+                  activeClass="Projects"
+                  to="Projects"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-gray-800 text-black dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                >
+                  Projects
+                </Link>
+
+                <Link
+                  href="/Contact"
+                  activeClass="Contact"
+                  to="Contact"
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer hover:bg-gray-800 text-black dark:text-white block px-3 py-2 rounded-md text-base font-md"
+                >
+                  Contact
+                </Link>
+                <div className="pl-2">{darkMode}</div>
+              </div>
+            </div>
+          )}
+        </Transition>
+      </nav>
+    </div>
   );
 }
+
+export default Navbar;
