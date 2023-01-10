@@ -35,7 +35,7 @@ export default function SkillGroup({ name, skills, animationX }) {
   }, [control, inView]);
 
   return (
-    <div
+    <motion.div
       ref={ref}
       initial="hidden"
       variants={boxVariant}
@@ -56,6 +56,6 @@ export default function SkillGroup({ name, skills, animationX }) {
         );
       })}
       {/* <p className="font-normal text-gray-700 dark:text-gray-400"></p> */}
-    </div>
+    </motion.div>
   );
 }
