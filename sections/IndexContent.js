@@ -13,7 +13,7 @@ export default function IndexContent({ colors, temas }) {
         <Image src="/bg2.svg" fill={true} className="object-cover" />
       </div>
       {/* Headlines */}
-      <h2 className="text-4xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 ">
+      <h2 className="text-4xl flex flex-row w-fit text-gray-800 text-center leading-normal sm:text-6xl font-bold capitalize dark:text-gray-100 pr-4">
         Welcome to my Portfolio
         <Image src="/hand.svg" height={64} width={64} />
       </h2>
